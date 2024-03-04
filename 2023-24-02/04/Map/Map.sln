@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Map", "Map\Map.csproj", "{2537847B-5D61-4860-A2F7-75F5E81A1D45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMap", "TestMap\TestMap.csproj", "{6ECC138B-286B-4FEA-B4FD-36A856463FD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2537847B-5D61-4860-A2F7-75F5E81A1D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2537847B-5D61-4860-A2F7-75F5E81A1D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2537847B-5D61-4860-A2F7-75F5E81A1D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2537847B-5D61-4860-A2F7-75F5E81A1D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ECC138B-286B-4FEA-B4FD-36A856463FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ECC138B-286B-4FEA-B4FD-36A856463FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ECC138B-286B-4FEA-B4FD-36A856463FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ECC138B-286B-4FEA-B4FD-36A856463FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8730EA97-135F-4747-BFFD-256796354DFB}
+	EndGlobalSection
+EndGlobal
