@@ -14,9 +14,11 @@ namespace TestMap
 
             map.Insert(new Map.Map.Item(1, "barack"));
             Assert.AreEqual(map.ToString(), "[(1:barack)]");
+            Assert.AreEqual(1, map.Count());
 
             map.SetEmpty();
             Assert.AreEqual(map.ToString(), "[]");
+            Assert.AreEqual(0, map.Count());
         }
 
         [TestMethod]
@@ -35,6 +37,8 @@ namespace TestMap
             Assert.AreEqual(map.Count(), 2);
             Assert.AreEqual(map.ToString(), "[(1:barack)(2:eper)]");
             Assert.AreEqual(map.In(1), true);
+            Assert.AreNotEqual(map.In(150), true);
+            Assert.AreEqual(map.In(150), false);
 
             map.Insert(new Map.Map.Item(0, "alma"));
             Assert.AreEqual(map.Count(), 3);
@@ -45,7 +49,7 @@ namespace TestMap
             Assert.AreEqual(map.Count(), 5);
             Assert.AreEqual(map.ToString(), "[(0:alma)(1:barack)(2:eper)(4:narancs)(5:szilva)]");
 
-            Assert.ThrowsException<Map.Map.ExistingKeyException>(
+            Assert.ThrowsException<Map.Map.AlreadyExistingKeyException>(
                 () => map.Insert(new Map.Map.Item(4, "mandarin")) );
         }
 
