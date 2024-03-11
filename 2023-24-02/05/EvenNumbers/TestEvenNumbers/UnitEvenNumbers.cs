@@ -1,4 +1,4 @@
-using static Simultan.Program;
+using static EvenNumbers.Program;
 
 namespace TestEvenNumbers
 {
