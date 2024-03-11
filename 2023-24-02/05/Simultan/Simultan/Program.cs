@@ -28,6 +28,34 @@ namespace Simultan
 
         public static void Computing(string fileName, out bool allEven, out int greatest)
         {
+            allEven = true;
+            greatest = 0;
+
+            try
+            {
+                TextFileReader textFileReader = new(fileName);
+
+                bool canRead = textFileReader.ReadInt(out int e);
+                if (!canRead)
+                {
+                    throw new EmptyFileException();
+                }
+
+                while (canRead)
+                {
+                    greatest = Math.Max(greatest, e);
+                    // if (e > greatest)
+                    // {
+                    //     greatest = e;
+                    // }
+                    allEven = allEven && (e % 2 == 0);
+                    canRead = textFileReader.ReadInt(out e);
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine($"Cannot find specified file: {fileName}");
+            }
         }
     }
 }
