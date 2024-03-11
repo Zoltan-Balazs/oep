@@ -1,8 +1,4 @@
-﻿//Author:   Gregorics Tibor
-//Date:     2024.02.15.
-//Title:    Decision and maximum selecting simultaneously
-
-using TextFile;
+﻿using TextFile;
 
 namespace Simultan
 {
@@ -13,9 +9,15 @@ namespace Simultan
         {
             try
             {
-                Computing("input.txt", out bool all_even, out int greatest);
-                if (all_even) Console.WriteLine("All numbers are even");
-                else Console.WriteLine("There are odd numbers");
+                Computing("input.txt", out bool allEven, out int greatest);
+                if (allEven)
+                {
+                    Console.WriteLine("All numbers are even");
+                }
+                else
+                {
+                    Console.WriteLine("There are odd numbers");
+                }
                 Console.WriteLine($"The greatest number: {greatest}");
             }
             catch (EmptyFileException)
@@ -24,7 +26,7 @@ namespace Simultan
             }
         }
 
-        public static void Computing(string fname, out bool all_even, out int greatest)
+        public static void Computing(string fileName, out bool allEven, out int greatest)
         {
         }
     }

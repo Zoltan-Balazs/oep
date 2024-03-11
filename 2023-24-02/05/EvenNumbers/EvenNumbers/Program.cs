@@ -1,8 +1,4 @@
-﻿//Author:   Gregorics Tibor
-//Date:     2024.02.15.
-//Title:    Even numbers
-
-using TextFile;
+﻿using TextFile;
 
 namespace EvenNumbers
 {
@@ -10,13 +6,13 @@ namespace EvenNumbers
     {
         static void Main()
         {
-            Counting("input.txt", out int countbegin, out int countend);
+            Counting("input.txt", out int countBegin, out int countEnd);
 
-            Console.WriteLine($"Number of even numbers before the first negativ: {countbegin}");
-            Console.WriteLine($"Number of even numbers after the first negativ: {countend}");
+            Console.WriteLine($"Number of even numbers before the first negativ: {countBegin}");
+            Console.WriteLine($"Number of even numbers after the first negativ: {countEnd}");
         }
 
-        public static void Counting(string fname, out int countbegin, out int countend)
+        public static void Counting(string fileName, out int countBegin, out int countEnd)
         {
         }
     }
