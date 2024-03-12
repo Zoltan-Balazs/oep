@@ -1,0 +1,4 @@
+karacsonyi  spanyol piros 10
+szuros      mexico  feher 1000
+kopasz      kalahar sarga 54
+magas       mexico  piros 20

@@ -1,0 +1,5 @@
+2
+Earth   1
+first   Breaker 3   3   3
+Venus   1
+second  Lander  1   1   1

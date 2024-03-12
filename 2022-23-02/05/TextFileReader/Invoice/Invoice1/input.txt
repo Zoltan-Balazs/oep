@@ -1,0 +1,3 @@
+Anna monitor 200000
+Jani laptop 420000 usb 2000
+Karcsi pendrive 3000

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoice2", "Invoice2\Invoice2.csproj", "{64CD41FE-048F-49D0-A223-ACA7F65743A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice1", "Invoice1\Invoice1.csproj", "{A3080055-96D1-4884-80E9-4C7D45F386FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64CD41FE-048F-49D0-A223-ACA7F65743A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CD41FE-048F-49D0-A223-ACA7F65743A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CD41FE-048F-49D0-A223-ACA7F65743A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CD41FE-048F-49D0-A223-ACA7F65743A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3080055-96D1-4884-80E9-4C7D45F386FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3080055-96D1-4884-80E9-4C7D45F386FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3080055-96D1-4884-80E9-4C7D45F386FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3080055-96D1-4884-80E9-4C7D45F386FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C210827-281F-48B9-8827-8A4FF849E50A}
+	EndGlobalSection
+EndGlobal

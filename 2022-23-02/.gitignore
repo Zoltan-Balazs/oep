@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+**/.vs/
+**/.vscode/
+**/.zip
+**/TestResults/
+**/packages/
+**/.DS_Store

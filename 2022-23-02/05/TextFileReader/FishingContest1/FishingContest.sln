@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingContest", "FishingContest\FishingContest.csproj", "{4847B93B-E30C-4523-9CF2-8B1697605188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFishingContest", "TestFishingContest\TestFishingContest.csproj", "{4C78C4AD-0E06-4C0B-8D34-4FBA6D758786}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4847B93B-E30C-4523-9CF2-8B1697605188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4847B93B-E30C-4523-9CF2-8B1697605188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4847B93B-E30C-4523-9CF2-8B1697605188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4847B93B-E30C-4523-9CF2-8B1697605188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C78C4AD-0E06-4C0B-8D34-4FBA6D758786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C78C4AD-0E06-4C0B-8D34-4FBA6D758786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C78C4AD-0E06-4C0B-8D34-4FBA6D758786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C78C4AD-0E06-4C0B-8D34-4FBA6D758786}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADDDA458-3A59-437B-A6C1-541446AC3098}
+	EndGlobalSection
+EndGlobal
