@@ -1,0 +1,5 @@
+cactus1 red Mexico 5
+cactus2 yellow Texas 10
+cactus3 blue Mexico 8
+cactus4 magenta California 8
+cactus5 red California 8
