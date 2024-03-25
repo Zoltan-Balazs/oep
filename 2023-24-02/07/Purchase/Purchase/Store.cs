@@ -1,0 +1,6 @@
+﻿namespace Purchase
+{
+    class Store
+    {
+    }
+}

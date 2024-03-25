@@ -1,0 +1,6 @@
+﻿namespace ATM
+{
+    class Card
+    {
+    }
+}
