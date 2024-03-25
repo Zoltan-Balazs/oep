@@ -1,8 +1,4 @@
-﻿//Author:   Gregorics Tibor
-//Date:     2024.02.15.
-//Title:    Cactus
-
-namespace CactusAssortment
+﻿namespace CactusAssortment
 {
     public class Program
     {
@@ -22,7 +18,7 @@ namespace CactusAssortment
                 {
                     Infile.Cactus e = cactusfile.Current;
                     if (e.color == "red") redfile.WriteLine(e.name);
-                    if (e.homeland == "Mexico") mexicofile.WriteLine(e.name);
+                    if (e.descendant == "Mexico") mexicofile.WriteLine(e.name);
                 }
             }
             catch (System.IO.FileNotFoundException)

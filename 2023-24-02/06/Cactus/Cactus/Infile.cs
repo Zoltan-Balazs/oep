@@ -1,8 +1,4 @@
-﻿//Author:   Gregorics Tibor
-//Date:     2024.02.15.
-//Title:    Cactus
-
-using TextFile;
+﻿using TextFile;
 
 namespace CactusAssortment
 {
@@ -10,18 +6,26 @@ namespace CactusAssortment
     {
         public record Cactus
         {
+            public string name, color, descendant;
+            public int size;
         }
 
-        public Cactus Current { get; private set; }
+        public Cactus Current { get; }
 
         private readonly TextFileReader reader;
 
-        public Infile(string fname)
+        public Infile(string fileName)
         {
+            reader = new TextFileReader(fileName);
+            Current = new Cactus();
         }
 
         public bool Read()
         {
+            reader.ReadString(out Current.name);
+            reader.ReadString(out Current.color);
+            reader.ReadString(out Current.descendant);
+            return reader.ReadInt(out Current.size);
         }
     }
 }

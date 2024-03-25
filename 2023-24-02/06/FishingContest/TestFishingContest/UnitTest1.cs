@@ -14,16 +14,16 @@ namespace TestFishingContest
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             InFile f = new("input0.txt");
             Fisher fisher = Program.Search(f);
-            Assert.AreEqual(fisher, null);
+            Assert.AreEqual(null, fisher);
         }
-   
+
         [TestMethod]
         public void TestSearch1()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             InFile f = new("input1.txt");
             Fisher fisher = Program.Search(f);
-            Assert.AreEqual(fisher, null);
+            Assert.AreEqual(null, fisher);
         }
 
         [TestMethod]
@@ -32,7 +32,7 @@ namespace TestFishingContest
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             InFile f = new("input2.txt");
             Fisher fisher = Program.Search(f);
-            Assert.AreEqual(fisher.name, "Józsi");
+            Assert.AreEqual("JÃ³zsi", fisher.name);
         }
     }
 }

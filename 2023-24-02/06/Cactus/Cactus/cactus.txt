@@ -1,1 +1,3 @@
 cactus red Mexico 5
+9escsoport red USA 6
+10escsoport blue Mexico 6
