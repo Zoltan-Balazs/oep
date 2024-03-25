@@ -6,8 +6,8 @@ namespace Garden
     {
         static void Main()
         {
-            Garden garden = new (5);
-            Gardener gardener = new (garden);
+            Garden garden = new(5);
+            Gardener gardener = new(garden);
 
             gardener.garden.Plant(1, Potatoe.Instance(), 4);
             gardener.garden.Plant(2, Pea.Instance(), 4);

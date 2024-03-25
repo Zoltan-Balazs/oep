@@ -12,18 +12,21 @@ namespace Cactus
             public string color;
             public int height;
         }
+
         static void Main()
         {
-            using StreamReader reader = new ("inp.txt");
-            using StreamWriter writer1 = new (@"..\..\..\out1.txt");
-            using StreamWriter writer2 = new (@"..\..\..\out2.txt");
+            using StreamReader reader = new("inp.txt");
+            using StreamWriter writer1 = new(@"..\..\..\out1.txt");
+            using StreamWriter writer2 = new(@"..\..\..\out2.txt");
 
             string line;
             while ((line = reader.ReadLine()) != null)
             {
                 ParseLine(line, out Cactus cactus);
-                if ("piros" == cactus.color) writer1.WriteLine(cactus.name);
-                if ("mexico" == cactus.country) writer2.WriteLine(cactus.name);
+                if ("piros" == cactus.color)
+                    writer1.WriteLine(cactus.name);
+                if ("mexico" == cactus.country)
+                    writer2.WriteLine(cactus.name);
             }
         }
 

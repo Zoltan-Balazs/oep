@@ -8,8 +8,8 @@ namespace Rational
         {
             try
             {
-                Rational a = new (-3, 2);
-                Rational b = new (-1, 2);
+                Rational a = new(-3, 2);
+                Rational b = new(-1, 2);
 
                 Console.WriteLine($"a = {a}, b = {b}");
 
@@ -18,7 +18,7 @@ namespace Rational
                 Console.WriteLine("a * b = {0}", a * b);
                 Console.WriteLine("a / b = {0}", a / b);
             }
-            catch(Rational.NullDenominator)
+            catch (Rational.NullDenominator)
             {
                 Console.WriteLine("Érvénytelen szám");
             }

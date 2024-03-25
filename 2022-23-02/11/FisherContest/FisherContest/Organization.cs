@@ -8,15 +8,17 @@ namespace Fisher_Contest
     public class Organization
     {
         public class MemberAlreadyException : Exception { }
+
         public class ExistingContestException : Exception { }
 
-        private readonly List<Contest> contests = new ();
-        public List<Fisher> Members { get; } = new ();
+        private readonly List<Contest> contests = new();
+        public List<Fisher> Members { get; } = new();
 
         public Fisher Join(string name)
         {
-            if (Search(name) != null) throw new MemberAlreadyException ();
-            Fisher fisher = new (name);
+            if (Search(name) != null)
+                throw new MemberAlreadyException();
+            Fisher fisher = new(name);
             Members.Add(fisher);
             return fisher;
         }
@@ -25,7 +27,8 @@ namespace Fisher_Contest
         {
             foreach (Fisher fisher in Members)
             {
-                if (fisher.name == name) return fisher;
+                if (fisher.name == name)
+                    return fisher;
             }
             return null;
         }
@@ -35,14 +38,17 @@ namespace Fisher_Contest
             bool l = false;
             foreach (Contest c in contests)
             {
-                if (l = (c.place == place) && c.Start == start) break;
+                if (l = (c.place == place) && c.Start == start)
+                    break;
             }
-            if (l) throw new ExistingContestException();
+            if (l)
+                throw new ExistingContestException();
 
-            Contest contest = new (this, place, start);
+            Contest contest = new(this, place, start);
             contests.Add(contest);
             return contest;
         }
+
         public bool BestContest(out Contest contest)
         {
             bool l = false;
@@ -50,18 +56,22 @@ namespace Fisher_Contest
             double max = 0.0;
             foreach (Contest c in contests)
             {
-                if (!c.AllCatfishes()) continue;
+                if (!c.AllCatfishes())
+                    continue;
                 double s = c.TotalAmount();
                 if (l)
                 {
                     if (s > max)
                     {
-                        contest = c; max = s;
+                        contest = c;
+                        max = s;
                     }
                 }
                 else
                 {
-                    l = true; contest = c; max = s;
+                    l = true;
+                    contest = c;
+                    max = s;
                 }
             }
             return l;

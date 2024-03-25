@@ -13,6 +13,7 @@ namespace DiagTest
             Assert.AreEqual(c[0, 1], 0);
             Assert.AreEqual(c[1, 1], 0);
         }
+
         [TestMethod]
         public void Change()
         {
@@ -25,6 +26,7 @@ namespace DiagTest
             Assert.AreEqual(c[0, 1], 0);
             Assert.AreEqual(c[1, 1], 1);
         }
+
         [TestMethod]
         public void Add()
         {

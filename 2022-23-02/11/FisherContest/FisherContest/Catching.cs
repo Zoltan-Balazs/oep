@@ -15,11 +15,18 @@ namespace Fisher_Contest
         public Contest Contest { get; }
         private readonly Fisher fisher;
 
-        public Catching(DateTime time, Fish fish, double weight, Fisher fisher, Contest contest) 
+        public Catching(DateTime time, Fish fish, double weight, Fisher fisher, Contest contest)
         {
-            this.Time = time;  Fish = fish; this.weight = weight; this.fisher = fisher; Contest = contest; 
+            this.Time = time;
+            Fish = fish;
+            this.weight = weight;
+            this.fisher = fisher;
+            Contest = contest;
         }
 
-        public double Value() { return weight * Fish.Point(); }
+        public double Value()
+        {
+            return weight * Fish.Point();
+        }
     }
 }

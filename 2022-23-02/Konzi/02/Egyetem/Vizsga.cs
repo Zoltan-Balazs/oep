@@ -56,14 +56,18 @@ namespace Egyetem
             }
             if (!isExamHeldAtLocation)
             {
-                throw new Exception("Hiba a jelentkezésnél (A helyen nincs meghírdetve egy vizsga sem a kurzusra)");
+                throw new Exception(
+                    "Hiba a jelentkezésnél (A helyen nincs meghírdetve egy vizsga sem a kurzusra)"
+                );
             }
 
             foreach (Hallgato e in hely.hallgatok)
             {
                 if (e == hallg)
                 {
-                    throw new Exception("Hiba a jelentkezésnél (A hallgató már felvette az adott helyre a visgát)");
+                    throw new Exception(
+                        "Hiba a jelentkezésnél (A hallgató már felvette az adott helyre a visgát)"
+                    );
                 }
             }
 
@@ -97,22 +101,36 @@ namespace Egyetem
             return kedveltHely;
         }
 
+        public virtual bool Is_Norm()
+        {
+            return false;
+        }
 
-        public virtual bool Is_Norm() { return false; }
-        public virtual bool Is_Uto() { return false; }
+        public virtual bool Is_Uto()
+        {
+            return false;
+        }
     }
 
     internal class Normal : Vizsga
     {
-        public Normal(string datum, Kurzus kurzus) : base(datum, kurzus) { }
+        public Normal(string datum, Kurzus kurzus)
+            : base(datum, kurzus) { }
 
-        public override bool Is_Norm() { return true; }
+        public override bool Is_Norm()
+        {
+            return true;
+        }
     }
 
     internal class Uto : Vizsga
     {
-        public Uto(string datum, Kurzus kurzus) : base(datum, kurzus) { }
+        public Uto(string datum, Kurzus kurzus)
+            : base(datum, kurzus) { }
 
-        public override bool Is_Uto() { return true; }
+        public override bool Is_Uto()
+        {
+            return true;
+        }
     }
 }

@@ -5,11 +5,17 @@ namespace ATM
     class ATM
     {
         public class FewMoneyException : Exception { }
+
         public class WrongPinCodeException : Exception { }
 
         public readonly string location;
         private readonly Center center;
-        public ATM(string location, Center center) { this.location = location; this.center = center; }
+
+        public ATM(string location, Center center)
+        {
+            this.location = location;
+            this.center = center;
+        }
 
         public void Process(Customer cust)
         {
@@ -21,9 +27,11 @@ namespace ATM
                 {
                     center.Transaction(card.bankCode, card.cardNo, -a);
                 }
-                else throw new FewMoneyException();
+                else
+                    throw new FewMoneyException();
             }
-            else throw new WrongPinCodeException();
+            else
+                throw new WrongPinCodeException();
         }
     }
 }

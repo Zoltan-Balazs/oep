@@ -12,7 +12,7 @@ namespace Purchase
 
         public Customer(string filename)
         {
-            TextFileReader reader = new (filename);
+            TextFileReader reader = new(filename);
             reader.ReadString(out string str);
             name = str;
             while (reader.ReadString(out str))
@@ -21,7 +21,6 @@ namespace Purchase
             }
         }
 
-        
         public void Purchase(Store store)
         {
             Console.WriteLine($"{name} vásárló megvette az alábbi árukat: ");
@@ -55,7 +54,7 @@ namespace Purchase
 
         private void Drag(Product product, ref Department department)
         {
-            department.stock.Remove(product!); 
+            department.stock.Remove(product!);
             cart.Add(product!);
         }
 
@@ -67,7 +66,8 @@ namespace Purchase
             {
                 if ((l = (p.name == name)))
                 {
-                    product = p; break;
+                    product = p;
+                    break;
                 }
             }
             return l;
@@ -80,7 +80,8 @@ namespace Purchase
             int min = 0;
             foreach (Product p in d.stock)
             {
-                if (p.name != name) continue;
+                if (p.name != name)
+                    continue;
                 if (l)
                 {
                     if (min > p.price)

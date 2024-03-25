@@ -5,34 +5,44 @@ namespace Rational
     class Rational
     {
         public class NullDenominator : Exception { };
+
         public class NullDivision : Exception { };
 
         private int n;
         private int d;
-        public Rational(int n = 0, int d = 1) 
-        { 
-            if (d == 0) throw new NullDenominator();
-            this.n = n; this.d = d;
+
+        public Rational(int n = 0, int d = 1)
+        {
+            if (d == 0)
+                throw new NullDenominator();
+            this.n = n;
+            this.d = d;
             // Reduce();
         }
-        public static Rational operator + (Rational a, Rational b)
+
+        public static Rational operator +(Rational a, Rational b)
         {
             return new Rational(a.n * b.d + a.d * b.n, a.d * b.d);
         }
-        public static Rational operator - (Rational a, Rational b)
+
+        public static Rational operator -(Rational a, Rational b)
         {
             return new Rational(a.n * b.d - a.d * b.n, a.d * b.d);
         }
-        public static Rational operator * (Rational a, Rational b)
+
+        public static Rational operator *(Rational a, Rational b)
         {
             return new Rational(a.n * b.n, a.d * b.d);
         }
-        public static Rational operator / (Rational a, Rational b)
+
+        public static Rational operator /(Rational a, Rational b)
         {
-            if (0 == b.n) throw new NullDivision();
+            if (0 == b.n)
+                throw new NullDivision();
             return new Rational(a.n * b.d, a.d * b.n);
         }
-        public override string ToString() 
+
+        public override string ToString()
         {
             return "(" + n.ToString() + "," + d.ToString() + ")";
         }

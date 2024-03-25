@@ -3,6 +3,7 @@
     class Menu
     {
         private readonly PrQueue pq = new();
+
         public void Run()
         {
             int v;
@@ -36,6 +37,7 @@
                 }
             } while (v != 0);
         }
+
         private static int GetMenuPoint()
         {
             int v;
@@ -54,10 +56,14 @@
                 {
                     v = int.Parse(Console.ReadLine()!);
                 }
-                catch (System.FormatException) { v = -1; }
-            } while(v<0 || v>5);
+                catch (System.FormatException)
+                {
+                    v = -1;
+                }
+            } while (v < 0 || v > 5);
             return v;
         }
+
         private void PutIn()
         {
             Element e = new();
@@ -65,6 +71,7 @@
             e.Read();
             pq.Add(e);
         }
+
         private void RemoveMax()
         {
             Element e;
@@ -78,6 +85,7 @@
                 Console.WriteLine("A kiveves nem sikerult! A pr.sor ures!\n");
             }
         }
+
         private void GetMax()
         {
             Element e;
@@ -91,6 +99,7 @@
                 Console.WriteLine("A kiveves nem sikerult! A pr.sor ures!\n");
             }
         }
+
         private void CheckEmpty()
         {
             if (pq.IsEmpty())
@@ -98,11 +107,10 @@
             else
                 Console.WriteLine("A pr.sor nem ures.");
         }
+
         private void Write()
         {
             pq.Write();
         }
-
     }
 }
-

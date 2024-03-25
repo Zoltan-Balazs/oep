@@ -6,12 +6,14 @@ namespace Purchase
     {
         public readonly string name;
         public readonly int price;
+
         public Product(string name, int price)
         {
-            this.name = name; this.price = price;
+            this.name = name;
+            this.price = price;
         }
 
-        static public bool Read(TextFileReader reader, out Product product)
+        public static bool Read(TextFileReader reader, out Product product)
         {
             bool l;
             _ = reader.ReadString(out string name);

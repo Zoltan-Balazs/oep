@@ -1,6 +1,6 @@
 ﻿using System;
-using TextFile;
 using System.Collections.Generic;
+using TextFile;
 
 namespace Invoice1
 {
@@ -9,17 +9,23 @@ namespace Invoice1
         struct Product
         {
             public Product(string i, int p)
-            { id = i; price = p; }
+            {
+                id = i;
+                price = p;
+            }
+
             public string id;
             public int price;
         }
+
         class Invoice
         {
             public Invoice(string n)
             {
-                name = n; 
+                name = n;
                 list = new List<Product>();
             }
+
             public string name;
             public List<Product> list;
 
@@ -28,11 +34,12 @@ namespace Invoice1
                 list.Add(product);
             }
         }
+
         static void Main()
         {
             try
             {
-                TextFileReader f = new ("input.txt");
+                TextFileReader f = new("input.txt");
 
                 int income = 0;
                 while (ReadInvoice(ref f, out Invoice invoice))
@@ -65,16 +72,15 @@ namespace Invoice1
             {
                 char[] separators = new char[] { ' ', '\t' };
                 string[] tokens = line.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-                
+
                 invoice = new Invoice(tokens[0]);
 
                 for (int i = 1; i < tokens.Length; i += 2)
                 {
-                    invoice.Add(new Product(tokens[i], int.Parse(tokens[i+1])));
+                    invoice.Add(new Product(tokens[i], int.Parse(tokens[i + 1])));
                 }
             }
             return l;
         }
-
     }
 }

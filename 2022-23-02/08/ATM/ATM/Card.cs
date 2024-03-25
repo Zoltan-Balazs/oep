@@ -11,24 +11,28 @@ namespace ATM
         private string pinCode;
         public Customer customer;
 
-        public Card( Customer customer, string bankCode, string cardNo, string pinCode)
-        { 
-            this.customer = customer; this.bankCode = bankCode; this.cardNo = cardNo; this.pinCode = pinCode;  
+        public Card(Customer customer, string bankCode, string cardNo, string pinCode)
+        {
+            this.customer = customer;
+            this.bankCode = bankCode;
+            this.cardNo = cardNo;
+            this.pinCode = pinCode;
         }
 
-        public bool PinCheck(string pin) 
-        { 
+        public bool PinCheck(string pin)
+        {
             return pin == pinCode;
         }
 
-        public void ChangePin(string oldpin, string pin) 
+        public void ChangePin(string oldpin, string pin)
         {
-            if(oldpin==pinCode) pinCode = pin;
+            if (oldpin == pinCode)
+                pinCode = pin;
         }
 
-        public string GetBankCode() 
-        { 
-            return bankCode; 
+        public string GetBankCode()
+        {
+            return bankCode;
         }
     }
 }

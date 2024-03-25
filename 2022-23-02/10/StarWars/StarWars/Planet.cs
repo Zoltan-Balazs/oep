@@ -13,39 +13,57 @@ namespace StarWars
             return ships.Count;
         }
 
-        public Planet(string name) { this.name = name; ships = new List<StarShip>(); }
+        public Planet(string name)
+        {
+            this.name = name;
+            ships = new List<StarShip>();
+        }
 
         public void ProtectedBy(StarShip ship)
         {
-            if (!ships.Contains(ship)) ships.Add(ship);
+            if (!ships.Contains(ship))
+                ships.Add(ship);
         }
 
         public void LeftBy(StarShip ship)
         {
-            if (ships.Contains(ship)) ships.Remove(ship);
+            if (ships.Contains(ship))
+                ships.Remove(ship);
         }
+
         public int TotalShield()
         {
             int s = 0;
-            foreach (StarShip e in ships) s += e.GetShield(this);
+            foreach (StarShip e in ships)
+                s += e.GetShield(this);
             return s;
         }
+
         public bool MaxFirePower(out double max, out StarShip bestship)
         {
             bool l = false;
             max = 0.0;
-            bestship = null; ;
+            bestship = null;
+            ;
             foreach (StarShip ship in ships)
             {
                 double power = ship.Firepower();
-                if (!l) { l = true; max = power; bestship = ship; }
+                if (!l)
+                {
+                    l = true;
+                    max = power;
+                    bestship = ship;
+                }
                 else
                 {
-                    if (max < power) { max = power; bestship = ship; }
+                    if (max < power)
+                    {
+                        max = power;
+                        bestship = ship;
+                    }
                 }
             }
             return l;
         }
-
     }
 }

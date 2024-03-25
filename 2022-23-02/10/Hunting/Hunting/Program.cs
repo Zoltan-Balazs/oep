@@ -11,7 +11,7 @@ namespace Hunting
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             try
             {
-                Hunter hunter = new ("Zsolti", 63);
+                Hunter hunter = new("Zsolti", 63);
                 hunter.Read("input.txt");
 
                 Console.WriteLine($"Number of the male lions: {hunter.CountMaleLions()}");
@@ -29,7 +29,8 @@ namespace Hunting
                 {
                     Console.WriteLine("There exists an elephant with same length tusks.");
                 }
-                else ///
+                else
+                ///
                 {
                     Console.WriteLine("There is no elephant with same length tusks.");
                 }

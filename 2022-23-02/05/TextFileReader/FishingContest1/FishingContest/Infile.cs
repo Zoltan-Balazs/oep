@@ -10,16 +10,20 @@ namespace FishingContest
             Name = n;
             Sum = s;
         }
+
         public readonly string Name;
         public readonly double Sum;
-}
+    }
+
     public class Infile
     {
         readonly TextFileReader reader;
+
         public Infile(string fname)
         {
             reader = new TextFileReader(fname);
         }
+
         public bool ReadFisher(out Fisher fisher)
         {
             fisher = null;
@@ -31,7 +35,8 @@ namespace FishingContest
                 fisher = new Fisher(tokens[0], Sum(tokens));
                 return true;
             }
-            else return false;
+            else
+                return false;
         }
 
         public static double Sum(string[] tokens)
@@ -39,7 +44,8 @@ namespace FishingContest
             double s = 0.0;
             for (int i = 1; i < tokens.Length; i += 4)
             {
-                if (tokens[i + 1] == "ponty" && double.Parse(tokens[i + 2]) >= 0.5) s += double.Parse(tokens[i + 3]);
+                if (tokens[i + 1] == "ponty" && double.Parse(tokens[i + 2]) >= 0.5)
+                    s += double.Parse(tokens[i + 3]);
             }
             return s;
         }

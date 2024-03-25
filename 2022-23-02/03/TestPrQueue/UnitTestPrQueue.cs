@@ -6,18 +6,12 @@ namespace TestPriorityQueue
     public class UnitTestPriorityQueue
     {
         [TestMethod]
-        public void TestAdd()
-        {
-        }
+        public void TestAdd() { }
 
         [TestMethod]
-        public void TestRemMax()
-        {
-        }
+        public void TestRemMax() { }
 
         [TestMethod]
-        public void TestMaxIndex()
-        {
-        }
+        public void TestMaxIndex() { }
     }
 }

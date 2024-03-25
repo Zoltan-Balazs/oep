@@ -1,6 +1,6 @@
 ﻿using System;
-using TextFile;
 using System.Collections.Generic;
+using TextFile;
 
 namespace Circle_Point
 {
@@ -8,17 +8,18 @@ namespace Circle_Point
     {
         static void Main()
         {
-            try {
-                TextFileReader reader = new ("input.txt");
+            try
+            {
+                TextFileReader reader = new("input.txt");
 
                 reader.ReadDouble(out double a);
                 reader.ReadDouble(out double b);
                 reader.ReadDouble(out double c);
-                Circle k = new (new Point(a, b), c);
+                Circle k = new(new Point(a, b), c);
 
                 reader.ReadInt(out int n);
                 Point[] x = new Point[n];
-                for (int i = 0; i<n; ++i)
+                for (int i = 0; i < n; ++i)
                 {
                     reader.ReadDouble(out a);
                     reader.ReadDouble(out b);
@@ -29,12 +30,12 @@ namespace Circle_Point
                 int db = 0;
                 foreach (Point e in x)
                 {
-                    if (k.Contains(e)) ++db;
+                    if (k.Contains(e))
+                        ++db;
                 }
-                Console.WriteLine($"A kör lemezére eső pontok száma: {db}" );
-
+                Console.WriteLine($"A kör lemezére eső pontok száma: {db}");
             }
-            catch(System.IO.FileNotFoundException)
+            catch (System.IO.FileNotFoundException)
             {
                 Console.WriteLine("Rossz a fájl név!");
             }
@@ -43,6 +44,5 @@ namespace Circle_Point
                 Console.WriteLine("Kör sugara nem lehet negativ!");
             }
         }
-
     }
 }

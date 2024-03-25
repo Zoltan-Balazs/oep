@@ -23,12 +23,14 @@ namespace FishingContest
                 Console.WriteLine("Input file does not exist");
             }
         }
+
         public static List<string> Collect(Infile f)
         {
             List<string> names = new List<string>();
             while (f.ReadFisher(out Fisher fisher))
             {
-                if (fisher.OK) names.Add(fisher.Name);
+                if (fisher.OK)
+                    names.Add(fisher.Name);
             }
             return names;
         }

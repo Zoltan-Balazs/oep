@@ -7,13 +7,14 @@ namespace AllEven
     {
         static void Main()
         {
-            TextFileReader reader = new ("input.txt");
+            TextFileReader reader = new("input.txt");
             bool l = true;
-            while (reader.ReadInt(out int e) )
+            while (reader.ReadInt(out int e))
             {
-                if (!(l = e % 2 == 0)) break;
+                if (!(l = e % 2 == 0))
+                    break;
             }
-            Console.WriteLine(l?"igaz":"hamis");
+            Console.WriteLine(l ? "igaz" : "hamis");
         }
     }
 }

@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Egyetem
 {
-    internal class Kurzus 
+    internal class Kurzus
     {
         public string nev;
         public List<Vizsga> vizsgak = new List<Vizsga>();
         public List<Hallgato> hallgatok = new List<Hallgato>();
 
-        public Kurzus(string nev) 
+        public Kurzus(string nev)
         {
             this.nev = nev;
         }
 
-        public void Felvesz(Hallgato hallg) 
+        public void Felvesz(Hallgato hallg)
         {
             /*
             if (hallgatok.Contains(hallg))
@@ -25,9 +25,9 @@ namespace Egyetem
                 throw new Exception("Hiba a kurzus felvételénél");
             }
             */
-            foreach (Hallgato e in hallgatok) 
+            foreach (Hallgato e in hallgatok)
             {
-                if (e == hallg) 
+                if (e == hallg)
                 {
                     throw new Exception("Hiba a kurzus felvételénél");
                 }
@@ -35,19 +35,20 @@ namespace Egyetem
             hallgatok.Add(hallg);
         }
 
-        public Vizsga VizsgatHirdet(string dat, char tip) 
+        public Vizsga VizsgatHirdet(string dat, char tip)
         {
-            foreach (Vizsga e in vizsgak) 
+            foreach (Vizsga e in vizsgak)
             {
-                if (e.datum == dat) 
+                if (e.datum == dat)
                 {
                     throw new Exception("Hiba a vizsga létrehozásában");
                 }
             }
-            
+
             Vizsga vizsga;
 
-            switch (tip) {
+            switch (tip)
+            {
                 case 'N':
                     vizsga = new Normal(dat, this);
                     break;
@@ -63,11 +64,11 @@ namespace Egyetem
             return vizsga;
         }
 
-        public bool VanUtoVizsga() 
+        public bool VanUtoVizsga()
         {
-            foreach (Vizsga e in vizsgak) 
+            foreach (Vizsga e in vizsgak)
             {
-                if (e.Is_Uto()) 
+                if (e.Is_Uto())
                 {
                     return true;
                 }
@@ -75,15 +76,15 @@ namespace Egyetem
             return false;
         }
 
-        public bool LegtobbHelyszin(out string helyszin) 
+        public bool LegtobbHelyszin(out string helyszin)
         {
             helyszin = "";
 
             int max = 0;
 
-            foreach (Vizsga e in vizsgak) 
+            foreach (Vizsga e in vizsgak)
             {
-                if (max < e.helyek.Count) 
+                if (max < e.helyek.Count)
                 {
                     max = e.helyek.Count;
                     helyszin = e.datum;
@@ -98,8 +99,8 @@ namespace Egyetem
         {
             (int, string) max = (-1, "");
 
-            foreach (Vizsga e in vizsgak) 
-            { 
+            foreach (Vizsga e in vizsgak)
+            {
                 if (max.Item1 < e.helyek.Count)
                 {
                     max = (e.helyek.Count, e.datum);

@@ -8,30 +8,38 @@ namespace Hunting
     {
         public readonly string name;
         public readonly int age;
-        public readonly List<Trophy> trophies = new ();
+        public readonly List<Trophy> trophies = new();
 
-        public Hunter(string name, int age) { this.name = name; this.age = age; }
+        public Hunter(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
 
         public void Shot(Animal animal, string place, string date)
         {
             trophies.Add(new Trophy(animal, place, date));
         }
+
         public int CountMaleLions()
         {
             int c = 0;
             foreach (Trophy e in trophies)
             {
-                if (e.animal.IsLion() && e.animal.gender == Animal.Gender.male) ++c;
+                if (e.animal.IsLion() && e.animal.gender == Animal.Gender.male)
+                    ++c;
             }
             return c;
         }
+
         public bool MaxHornWeigthRate(out double rate)
         {
             bool l = false;
             rate = 0.0;
             foreach (Trophy e in trophies)
             {
-                if (!e.animal.IsRhino()) continue;
+                if (!e.animal.IsRhino())
+                    continue;
                 Rhino rhino = (Rhino)e.animal;
                 double r = (double)rhino.Horn / rhino.weight;
                 if (!l)
@@ -46,11 +54,16 @@ namespace Hunting
             }
             return l;
         }
+
         public bool SearchEqualTusks()
         {
-            foreach(Trophy e in trophies)
+            foreach (Trophy e in trophies)
             {
-                if (e.animal.IsElephant() && ((Elephant)e.animal).Lefttusk==((Elephant)e.animal).Righttusk) return true;
+                if (
+                    e.animal.IsElephant()
+                    && ((Elephant)e.animal).Lefttusk == ((Elephant)e.animal).Righttusk
+                )
+                    return true;
             }
             return false;
         }

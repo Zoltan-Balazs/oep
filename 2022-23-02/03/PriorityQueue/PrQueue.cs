@@ -5,7 +5,11 @@
         public int pr;
         public string data;
 
-        public Element() { data = ""; }
+        public Element()
+        {
+            data = "";
+        }
+
         public Element(int p, string str)
         {
             pr = p;
@@ -37,35 +41,45 @@
             } while (!ok);
         }
     }
+
     class PrQueue
     {
-        private readonly List<Element> seq = new();  //tároló sorozat vectorral implementálva
+        private readonly List<Element> seq = new(); //tároló sorozat vectorral implementálva
+
         public class PrQueueEmpty : Exception { }
 
         public void Add(Element a)
         {
             seq.Add(a);
         }
+
         public Element RemMax() //legnagyobb prioritássú elem kivétele a sorból
         {
-            if (seq.Count == 0) throw new PrQueueEmpty();
+            if (seq.Count == 0)
+                throw new PrQueueEmpty();
             int ind = MaxIndex();
             Element best = seq[ind];
             seq.RemoveAt(ind);
             return best;
         }
-        public Element GetMax()    //(egyik) legnagyobb prioritású elem visszaadása
+
+        public Element GetMax() //(egyik) legnagyobb prioritású elem visszaadása
         {
-            if (seq.Count == 0) throw new PrQueueEmpty();
+            if (seq.Count == 0)
+                throw new PrQueueEmpty();
             int ind = MaxIndex();
             return seq[ind];
         }
-        public bool IsEmpty()  //pr.sor ürességét vizsgálja
+
+        public bool IsEmpty() //pr.sor ürességét vizsgálja
         {
             return seq.Count == 0;
         }
 
-        public int GetCapacity() { return seq.Capacity; }
+        public int GetCapacity()
+        {
+            return seq.Capacity;
+        }
 
         public void Write()
         {
@@ -91,4 +105,3 @@
         }
     }
 }
-

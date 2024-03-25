@@ -1,9 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FishingContest;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
+using FishingContest;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestFishingContest
 {
@@ -14,7 +14,7 @@ namespace TestFishingContest
         public void TestOK0()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            string[] tokens = new string[] { "Józsi" };
+            string[] tokens = new string[] { "Jï¿½zsi" };
             Assert.AreEqual(false, Infile.OK(tokens));
         }
 
@@ -22,10 +22,26 @@ namespace TestFishingContest
         public void TestOK1()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            string[] tokens = new string[] { "Józsi",   "09:55", "harcsa",  "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0"  };
+            string[] tokens = new string[]
+            {
+                "Jï¿½zsi",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0"
+            };
             Assert.AreEqual(false, Infile.OK(tokens));
         }
 
@@ -33,11 +49,30 @@ namespace TestFishingContest
         public void TestOK2()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            string[] tokens = new string[] { "Józsi",   "09:55", "ponty",   "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0",
-                                                        "09:55", "harcsa",  "0.9", "0.9"  };
+            string[] tokens = new string[]
+            {
+                "Jï¿½zsi",
+                "09:55",
+                "ponty",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "0.9",
+                "0.9"
+            };
             Assert.AreEqual(false, Infile.OK(tokens));
         }
 
@@ -45,10 +80,26 @@ namespace TestFishingContest
         public void TestOK3()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            string[] tokens = new string[] { "Józsi",   "09:55", "ponty",   "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0"  };
+            string[] tokens = new string[]
+            {
+                "Jï¿½zsi",
+                "09:55",
+                "ponty",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0"
+            };
             Assert.AreEqual(false, Infile.OK(tokens));
         }
 
@@ -56,11 +107,30 @@ namespace TestFishingContest
         public void TestOK10()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            string[] tokens = new string[] { "Józsi",   "09:55", "ponty",   "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0",
-                                                        "09:55", "harcsa",  "1.0", "1.0"  };
+            string[] tokens = new string[]
+            {
+                "Jï¿½zsi",
+                "09:55",
+                "ponty",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0",
+                "09:55",
+                "harcsa",
+                "1.0",
+                "1.0"
+            };
             Assert.AreEqual(true, Infile.OK(tokens));
         }
     }

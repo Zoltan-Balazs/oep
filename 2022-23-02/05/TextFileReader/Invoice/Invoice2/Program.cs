@@ -9,7 +9,7 @@ namespace Invoice2
         {
             try
             {
-                Infile f = new ("input.txt");
+                Infile f = new("input.txt");
 
                 int income = 0;
                 while (f.ReadTotal(out int total))
@@ -22,8 +22,6 @@ namespace Invoice2
             {
                 Console.WriteLine("Input file does not exist");
             }
-
         }
-
     }
 }

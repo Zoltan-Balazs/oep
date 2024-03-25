@@ -32,43 +32,45 @@ namespace Diagonal
             do
             {
                 MenuWrite();
-                try 
+                try
                 {
                     n = int.Parse(Console.ReadLine()!);
                 }
-                catch (System.FormatException) { n = -1; }
+                catch (System.FormatException)
+                {
+                    n = -1;
+                }
                 switch (n)
-                    {
-                        case 1:
-                            GetElement(0);
-                            break;
-                        case 2:
-                            GetElement(1);
-                            break;
-                        case 3:
-                            SetElement(0);
-                            break;
-                        case 4:
-                            SetElement(1);
-                            break;
-                        case 5:
-                            WriteMatrix(0);
-                            break;
-                        case 6:
-                            WriteMatrix(1);
-                            break;
-                        case 7:
-                            Sum();
-                            break;
-                        case 8:
-                            Mul();
-                            break;
-                    }
-
+                {
+                    case 1:
+                        GetElement(0);
+                        break;
+                    case 2:
+                        GetElement(1);
+                        break;
+                    case 3:
+                        SetElement(0);
+                        break;
+                    case 4:
+                        SetElement(1);
+                        break;
+                    case 5:
+                        WriteMatrix(0);
+                        break;
+                    case 6:
+                        WriteMatrix(1);
+                        break;
+                    case 7:
+                        Sum();
+                        break;
+                    case 8:
+                        Mul();
+                        break;
+                }
             } while (n != 0);
-
         }
-        static private void MenuWrite()
+
+        private static void MenuWrite()
         {
             Console.WriteLine("\n\n 0. - Quit");
             Console.WriteLine(" 1. - Get an element of the matrix A");
@@ -80,9 +82,11 @@ namespace Diagonal
             Console.WriteLine(" 7. - Add matrices");
             Console.WriteLine(" 8. - Multiply matrices");
         }
+
         private void GetElement(int x)
         {
-            do {
+            do
+            {
                 try
                 {
                     Console.WriteLine("Give the index of the row: ");
@@ -102,6 +106,7 @@ namespace Diagonal
                 }
             } while (true);
         }
+
         private void SetElement(int x)
         {
             do
@@ -131,10 +136,12 @@ namespace Diagonal
                 }
             } while (true);
         }
+
         private void WriteMatrix(int x)
         {
             Console.Write(matrix[x].ToString());
         }
+
         private void Sum()
         {
             try
@@ -146,6 +153,7 @@ namespace Diagonal
                 Console.Write("Különböző méretű mátrixokat nem lehet összeadni!");
             }
         }
+
         private void Mul()
         {
             try

@@ -1,8 +1,8 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FishingContest;
 using System;
 using System.Globalization;
 using System.Threading;
+using FishingContest;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestFishingContest
 {
@@ -20,7 +20,7 @@ namespace TestFishingContest
         public void TestSum1()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            string[] tokens = new string[] { "09:34", "keszeg", "0.7", "2.0"};
+            string[] tokens = new string[] { "09:34", "keszeg", "0.7", "2.0" };
             Assert.AreEqual(Infile.Sum(tokens), 0.0);
         }
 
@@ -28,7 +28,7 @@ namespace TestFishingContest
         public void TestSum2()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            string[] tokens = new string[] { "09:34", "keszeg", "0.7", "2.0"};
+            string[] tokens = new string[] { "09:34", "keszeg", "0.7", "2.0" };
             Assert.AreEqual(Infile.Sum(tokens), 0.0);
         }
 
@@ -36,8 +36,18 @@ namespace TestFishingContest
         public void TestSum3()
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            string[] tokens = new string[] { "józsi", "09:34", "keszeg", "0.7", "2.0",
-                                                      "10:02", "ponty",  "1.7", "5.7" };
+            string[] tokens = new string[]
+            {
+                "jï¿½zsi",
+                "09:34",
+                "keszeg",
+                "0.7",
+                "2.0",
+                "10:02",
+                "ponty",
+                "1.7",
+                "5.7"
+            };
             Assert.AreEqual(Infile.Sum(tokens), 5.7);
         }
 
@@ -48,7 +58,7 @@ namespace TestFishingContest
             Fisher fisher = Program.Search(new Infile("input0.txt"));
             Assert.AreEqual(fisher, null);
         }
-   
+
         [TestMethod]
         public void TestSearch1()
         {
@@ -62,8 +72,7 @@ namespace TestFishingContest
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
             Fisher fisher = Program.Search(new Infile("input2.txt"));
-            Assert.AreEqual(fisher.Name, "Józsi");
+            Assert.AreEqual(fisher.Name, "Jï¿½zsi");
         }
-
     }
 }
