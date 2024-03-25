@@ -14,17 +14,15 @@ namespace Bag
 
                 while (reader.ReadString(out string elem))
                 {
-                        bag.Insert(elem);
+                    bag.Insert(elem);
                 }
 
                 Console.WriteLine($"The most frequent element: {bag.Max()}");
-
             }
             catch (System.IO.FileNotFoundException)
             {
                 Console.WriteLine("Input file does not exist");
             }
-
         }
     }
 }

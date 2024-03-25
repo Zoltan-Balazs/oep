@@ -13,7 +13,7 @@ namespace TestCactus
                 string cactus = "cactus" + i + ".txt";
                 string red = "red" + i + ".txt";
                 string mexico = "mexico" + i + ".txt";
- 
+
                 Assortment(cactus, red, mexico);
 
                 using StreamReader redActual = File.OpenText(red);

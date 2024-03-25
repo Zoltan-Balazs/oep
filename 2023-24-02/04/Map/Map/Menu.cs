@@ -3,6 +3,7 @@
     class Menu
     {
         private readonly Map map = new();
+
         public void Run()
         {
             int v;
@@ -32,27 +33,34 @@
                     case 5:
                         Console.Write("key: ");
                         key = int.Parse(Console.ReadLine()!);
-                        if (map.In(key)) Console.WriteLine($"map contains an element with the key {key}");
-                        else Console.WriteLine($"map does not contain an element with the key {key}");
+                        if (map.In(key))
+                            Console.WriteLine($"map contains an element with the key {key}");
+                        else
+                            Console.WriteLine(
+                                $"map does not contain an element with the key {key}"
+                            );
                         break;
                     case 6:
                         Console.Write("key: ");
                         key = int.Parse(Console.ReadLine()!);
                         try
                         {
-                            Console.WriteLine($"date of the element with the key {key} is {map.Select(key)}");
+                            Console.WriteLine(
+                                $"date of the element with the key {key} is {map.Select(key)}"
+                            );
                         }
-                        catch(Map.NonExistingKeyException)
+                        catch (Map.NonExistingKeyException)
                         {
-                            Console.WriteLine($"No element with the key {key}"); 
+                            Console.WriteLine($"No element with the key {key}");
                         }
-                            break;
+                        break;
                     default:
                         break;
                 }
                 Console.WriteLine(map.ToString());
             } while (v != 0);
         }
+
         private static int GetMenuPoint()
         {
             int v;
@@ -72,10 +80,12 @@
                 {
                     v = int.Parse(Console.ReadLine()!);
                 }
-                catch (System.FormatException) { v = -1; }
-            } while(v<0 || v>6);
+                catch (System.FormatException)
+                {
+                    v = -1;
+                }
+            } while (v < 0 || v > 6);
             return v;
         }
     }
 }
-

@@ -12,13 +12,16 @@
             try
             {
                 Infile cactusfile = new(cactus);
-                using StreamWriter redfile = File.CreateText(red), mexicofile = File.CreateText(mexico);
+                using StreamWriter redfile = File.CreateText(red),
+                    mexicofile = File.CreateText(mexico);
 
                 while (cactusfile.Read())
                 {
                     Infile.Cactus e = cactusfile.Current;
-                    if (e.color == "red") redfile.WriteLine(e.name);
-                    if (e.descendant == "Mexico") mexicofile.WriteLine(e.name);
+                    if (e.color == "red")
+                        redfile.WriteLine(e.name);
+                    if (e.descendant == "Mexico")
+                        mexicofile.WriteLine(e.name);
                 }
             }
             catch (System.IO.FileNotFoundException)
@@ -26,7 +29,5 @@
                 Console.WriteLine("File open error");
             }
         }
-
     }
 }
-

@@ -9,7 +9,7 @@ namespace TestMap
         [TestMethod]
         public void TestSetEmpty()
         {
-            Map.Map map = new ();
+            Map.Map map = new();
             Assert.AreEqual(map.ToString(), "[]");
 
             map.Insert(new Map.Map.Item(1, "barack"));
@@ -25,11 +25,11 @@ namespace TestMap
         public void TestInsert()
         {
             Map.Map map = new();
-            
+
             Assert.AreEqual(map.In(1), false);
 
             map.Insert(new Map.Map.Item(1, "barack"));
-            
+
             Assert.AreEqual(map.ToString(), "[(1:barack)]");
             Assert.AreEqual(map.In(1), true);
 
@@ -50,7 +50,8 @@ namespace TestMap
             Assert.AreEqual(map.ToString(), "[(0:alma)(1:barack)(2:eper)(4:narancs)(5:szilva)]");
 
             Assert.ThrowsException<Map.Map.AlreadyExistingKeyException>(
-                () => map.Insert(new Map.Map.Item(4, "mandarin")) );
+                () => map.Insert(new Map.Map.Item(4, "mandarin"))
+            );
         }
 
         [TestMethod]
@@ -63,7 +64,7 @@ namespace TestMap
             map.Insert(new Map.Map.Item(5, "szilva"));
             map.Insert(new Map.Map.Item(4, "narancs"));
             Assert.AreEqual(map.ToString(), "[(0:alma)(1:barack)(2:eper)(4:narancs)(5:szilva)]");
-            
+
             map.Remove(2);
             Assert.AreEqual(map.ToString(), "[(0:alma)(1:barack)(4:narancs)(5:szilva)]");
 
@@ -73,7 +74,7 @@ namespace TestMap
             map.Remove(5);
             Assert.AreEqual(map.ToString(), "[(1:barack)(4:narancs)]");
 
-            Assert.ThrowsException<Map.Map.NonExistingKeyException>( () => map.Remove(5) );
+            Assert.ThrowsException<Map.Map.NonExistingKeyException>(() => map.Remove(5));
         }
 
         [TestMethod]
@@ -85,7 +86,7 @@ namespace TestMap
             map.Insert(new Map.Map.Item(2, "eper"));
             map.Insert(new Map.Map.Item(0, "alma"));
             Assert.AreEqual(map.Select(2), "eper");
-            Assert.ThrowsException<Map.Map.NonExistingKeyException>(() => map.Select(5) );
+            Assert.ThrowsException<Map.Map.NonExistingKeyException>(() => map.Select(5));
         }
 
         [TestMethod]

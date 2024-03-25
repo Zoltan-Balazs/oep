@@ -10,7 +10,7 @@ class Program
         Console.WriteLine($"Dispenser \"d\" has a total capacity of: {d.Total} ml");
         Console.WriteLine($"Dispenser \"d\" has a portion size of: {d.Portion} ml");
         Console.WriteLine($"Dispenser \"d\" currently has {d.Current} ml of \"soap\"");
-        
+
         d.Fill();
         Console.WriteLine("Fill called on Dispenser \"d\"");
         Console.WriteLine($"Dispenser \"d\" currently has {d.Current} ml of \"soap\"");

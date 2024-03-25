@@ -3,8 +3,9 @@
     public class Map
     {
         public class AlreadyExistingKeyException : Exception { }
+
         public class NonExistingKeyException : Exception { }
-        
+
         public class Item
         {
             public string data;
@@ -43,7 +44,7 @@
             seq.Clear();
             // seq = new List<Item>();
         }
-        
+
         public int Count()
         {
             return seq.Count;
@@ -79,7 +80,8 @@
         public string Select(int key)
         {
             bool l = LogSearch(key, out int ind);
-            if (!l) { 
+            if (!l)
+            {
                 throw new NonExistingKeyException();
             }
 
@@ -93,7 +95,7 @@
 
             int ah = 0;
             int fh = seq.Count - 1;
-        
+
             while (!l && ah <= fh)
             {
                 ind = (ah + fh) / 2;

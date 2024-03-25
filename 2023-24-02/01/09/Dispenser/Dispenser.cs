@@ -18,7 +18,6 @@ public class Dispenser
         get { return current; }
     }
 
-
     public Dispenser(int total, int portion)
     {
         this.total = total;

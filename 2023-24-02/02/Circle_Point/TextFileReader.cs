@@ -15,7 +15,8 @@ namespace TextFile
 
         public TextFileReader(string filename)
         {
-            if (!File.Exists(filename)) throw new System.IO.FileNotFoundException();
+            if (!File.Exists(filename))
+                throw new System.IO.FileNotFoundException();
             reader = new StreamReader(filename);
         }
 
@@ -26,24 +27,30 @@ namespace TextFile
         //Activity: it uses the Read() method of reader if the text file is not empty
         public bool ReadChar(out char ch)
         {
-            if (reader == null) throw new System.IO.FileNotFoundException();
+            if (reader == null)
+                throw new System.IO.FileNotFoundException();
             ch = '\0';
             string limiter = " \n\t\r";
             int x;
-            while ((x = reader.Read()) != -1 && limiter.Contains(Convert.ToChar(x))) ;
-            if (x == -1) return false;
+            while ((x = reader.Read()) != -1 && limiter.Contains(Convert.ToChar(x)))
+                ;
+            if (x == -1)
+                return false;
             ch = Convert.ToChar(x);
             return true;
         }
 
         public char? ReadChar()
         {
-            if (reader == null) throw new System.IO.FileNotFoundException();
+            if (reader == null)
+                throw new System.IO.FileNotFoundException();
 
             string limiter = " \n\t\r";
             int x;
-            while ((x = reader.Read()) != -1 && limiter.Contains(Convert.ToChar(x))) ;
-            if (x == -1) return null;
+            while ((x = reader.Read()) != -1 && limiter.Contains(Convert.ToChar(x)))
+                ;
+            if (x == -1)
+                return null;
             char ch = Convert.ToChar(x);
             return ch;
         }
@@ -52,17 +59,20 @@ namespace TextFile
         //Input:    StreamReader reader -  datachannel to a text file
         //Output:   string str          -  string
         //          bool l              -  true if the string exists
-        //Activity: it finds the beginning of the next string overstepping whitespaces, 
+        //Activity: it finds the beginning of the next string overstepping whitespaces,
         //          and if this string exists, it concatenates its characters bordered by whitespace or eof
         public bool ReadString(out string str)
         {
             str = "";
-            if (reader == null) throw new System.IO.FileNotFoundException();
+            if (reader == null)
+                throw new System.IO.FileNotFoundException();
 
             string limiter = " \n\t\r";
             int x;
-            while ((x = reader.Read()) != -1 && limiter.Contains(Convert.ToChar(x))) ;
-            if (x == -1) return false;
+            while ((x = reader.Read()) != -1 && limiter.Contains(Convert.ToChar(x)))
+                ;
+            if (x == -1)
+                return false;
 
             str += Convert.ToChar(x);
             while ((x = reader.Read()) != -1 && !limiter.Contains(Convert.ToChar(x)))
@@ -74,12 +84,15 @@ namespace TextFile
 
         public string? ReadString()
         {
-            if (reader == null) throw new System.IO.FileNotFoundException();
+            if (reader == null)
+                throw new System.IO.FileNotFoundException();
 
             string limiter = " \n\t\r";
             int x;
-            while ((x = reader.Read()) != -1 && limiter.Contains(Convert.ToChar(x))) ;
-            if (x == -1) return null;
+            while ((x = reader.Read()) != -1 && limiter.Contains(Convert.ToChar(x)))
+                ;
+            if (x == -1)
+                return null;
 
             string str = "" + Convert.ToChar(x);
             while ((x = reader.Read()) != -1 && !limiter.Contains(Convert.ToChar(x)))
@@ -96,18 +109,22 @@ namespace TextFile
         //Activity: it reads the next string (see ReadString()), and then it will be converted to integer
         public bool ReadInt(out int n)
         {
-            if (reader == null) throw new System.IO.FileNotFoundException();
+            if (reader == null)
+                throw new System.IO.FileNotFoundException();
             n = 0;
             bool l = ReadString(out string str);
-            if (l) n = int.Parse(str);
+            if (l)
+                n = int.Parse(str);
             return l;
         }
- 
+
         public int? ReadInt()
         {
-            if (reader == null) throw new System.IO.FileNotFoundException();
+            if (reader == null)
+                throw new System.IO.FileNotFoundException();
             string str = ReadString()!;
-            if (str == null) return null;
+            if (str == null)
+                return null;
             return int.Parse(str);
         }
 
@@ -116,20 +133,26 @@ namespace TextFile
         //Output:   double a            -  double
         //          bool l              -  true if the string exists
         //Activity: it reads the next string (see ReadString()), and then it will be converted to double
-        public bool ReadDouble(out double a) 
+        public bool ReadDouble(out double a)
         {
-            if (reader == null) throw new System.IO.FileNotFoundException();
-            a = 0.0; 
+            if (reader == null)
+                throw new System.IO.FileNotFoundException();
+            a = 0.0;
             bool l = ReadString(out string str);
-            if (l) a = str.Contains('.') ? double.Parse(str,CultureInfo.CreateSpecificCulture("en-GB")) : double.Parse(str);
+            if (l)
+                a = str.Contains('.')
+                    ? double.Parse(str, CultureInfo.CreateSpecificCulture("en-GB"))
+                    : double.Parse(str);
             return l;
         }
 
         public double? ReadDouble()
         {
-            if (reader == null) throw new System.IO.FileNotFoundException();
+            if (reader == null)
+                throw new System.IO.FileNotFoundException();
             string str = ReadString()!;
-            if (str == null) return null;
+            if (str == null)
+                return null;
             return double.Parse(str);
         }
 
@@ -143,6 +166,7 @@ namespace TextFile
             line = reader.ReadLine()!;
             return line != null;
         }
+
         public string ReadLine()
         {
             return reader.ReadLine()!;

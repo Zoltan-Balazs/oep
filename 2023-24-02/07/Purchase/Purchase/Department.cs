@@ -2,7 +2,5 @@
 
 namespace Purchase
 {
-    class Department
-    {
-    }
+    class Department { }
 }

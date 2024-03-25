@@ -6,7 +6,9 @@ namespace CactusAssortment
     {
         public record Cactus
         {
-            public string name, color, descendant;
+            public string name,
+                color,
+                descendant;
             public int size;
         }
 

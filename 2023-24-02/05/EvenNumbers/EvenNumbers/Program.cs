@@ -31,7 +31,7 @@ namespace EvenNumbers
 
                     canRead = textFileReader.ReadInt(out e);
                 }
-                
+
                 // textFileReader.ReadInt(out e); - Első negativ szám nem számit
 
                 while (canRead)

@@ -24,8 +24,14 @@ namespace FishingContest
                 fisher = new Fisher(tokens[0]);
                 for (int i = 1; i < tokens.Length; i += 4)
                 {
-                    fisher.Add(new Fisher.Catch(tokens[i], tokens[i + 1], 
-                        double.Parse(tokens[i + 2]), double.Parse(tokens[i + 3])));
+                    fisher.Add(
+                        new Fisher.Catch(
+                            tokens[i],
+                            tokens[i + 1],
+                            double.Parse(tokens[i + 2]),
+                            double.Parse(tokens[i + 3])
+                        )
+                    );
                 }
             }
 

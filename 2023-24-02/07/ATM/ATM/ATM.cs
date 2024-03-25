@@ -2,7 +2,5 @@
 
 namespace ATM
 {
-    class ATM
-    {
-    }
+    class ATM { }
 }

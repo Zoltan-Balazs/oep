@@ -13,10 +13,10 @@ public class Bag
             count = c;
         }
     }
-    
+
     private List<Pair> seq = new List<Pair>();
     private int maxInd = 0;
-    
+
     public Bag()
     {
         // seq = new List<Pair>();
@@ -28,10 +28,7 @@ public class Bag
         // seq = new List<Pair>();
     }
 
-    public class EmptyBagException : Exception
-    {
-        
-    }
+    public class EmptyBagException : Exception { }
 
     public string Max()
     {
@@ -83,7 +80,7 @@ public class Bag
         boolXint bxi = new boolXint();
         bxi.b = l;
         bxi.i = ind;
-        
+
         return bxi;
     }
 
@@ -94,7 +91,7 @@ public class Bag
 
         int ah = 0;
         int fh = seq.Count - 1;
-        
+
         while (!l && ah <= fh)
         {
             ind = (ah + fh) / 2;

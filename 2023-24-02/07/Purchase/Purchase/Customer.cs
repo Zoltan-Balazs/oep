@@ -4,7 +4,5 @@ using TextFile;
 
 namespace Purchase
 {
-    class Customer
-    {
-    }
+    class Customer { }
 }

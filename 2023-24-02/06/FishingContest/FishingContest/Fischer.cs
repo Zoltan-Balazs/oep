@@ -6,8 +6,10 @@ namespace FishingContest
     {
         public record Catch
         {
-            public string time, species;
-            public double weight, length;
+            public string time,
+                species;
+            public double weight,
+                length;
 
             public Catch(string time, string species, double weight, double length)
             {

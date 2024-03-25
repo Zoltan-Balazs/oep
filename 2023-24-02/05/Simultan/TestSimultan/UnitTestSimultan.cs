@@ -23,10 +23,7 @@ namespace TestSimultan
                 Assert.IsTrue(allEven);
                 Assert.AreEqual(allEven, true);
             }
-            catch (Exception)
-            {
-                
-            }
+            catch (Exception) { }
         }
     }
 }

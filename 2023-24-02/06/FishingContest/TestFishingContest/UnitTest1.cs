@@ -1,7 +1,7 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FishingContest;
 using System.Globalization;
 using System.Threading;
+using FishingContest;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestFishingContest
 {

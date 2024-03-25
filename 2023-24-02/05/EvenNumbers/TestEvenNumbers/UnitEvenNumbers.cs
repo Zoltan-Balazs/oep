@@ -12,7 +12,7 @@ namespace TestEvenNumbers
             Assert.AreEqual(0, countBegin);
             Assert.AreEqual(1, countEnd);
         }
-        
+
         [TestMethod]
         public void TestFileTest10()
         {
@@ -20,7 +20,7 @@ namespace TestEvenNumbers
             Assert.AreEqual(1, countBegin);
             Assert.AreEqual(0, countEnd);
         }
-        
+
         [TestMethod]
         public void TestFileTest11()
         {

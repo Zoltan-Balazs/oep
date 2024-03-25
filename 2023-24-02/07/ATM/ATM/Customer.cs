@@ -3,7 +3,5 @@ using System.Collections.Generic;
 
 namespace ATM
 {
-    class Customer
-    {
-    }
+    class Customer { }
 }

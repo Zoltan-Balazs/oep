@@ -5,6 +5,7 @@ namespace Simultan
     public class Program
     {
         public class EmptyFileException : Exception { }
+
         public static void Main()
         {
             try
@@ -48,7 +49,7 @@ namespace Simultan
                     {
                         greatest = e;
                     }
-                    
+
                     // greatest = Math.Max(greatest, e);
 
                     allEven = allEven && (e % 2 == 0);

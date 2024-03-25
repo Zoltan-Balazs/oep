@@ -8,10 +8,7 @@ public class Dispenser
 
     public int Total
     {
-        get
-        {
-            return total;
-        }
+        get { return total; }
     }
 
     public int Portion => portion;

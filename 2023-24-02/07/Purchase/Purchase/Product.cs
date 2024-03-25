@@ -2,7 +2,5 @@
 
 namespace Purchase
 {
-    class Product
-    {
-    }
+    class Product { }
 }
