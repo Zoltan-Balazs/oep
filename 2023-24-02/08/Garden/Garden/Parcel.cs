@@ -1,0 +1,4 @@
+﻿namespace Garden
+{
+    class Parcel { }
+}
