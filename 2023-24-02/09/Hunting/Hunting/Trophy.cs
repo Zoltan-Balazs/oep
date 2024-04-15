@@ -1,0 +1,4 @@
+﻿namespace Hunting
+{
+    class Trophy { }
+}
