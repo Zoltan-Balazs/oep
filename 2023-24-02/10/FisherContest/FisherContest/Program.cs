@@ -38,7 +38,7 @@ namespace Fisher_Contest
                     );
                     foreach (string fishername in fishernames)
                     {
-                        contest.SignUp(org.Search(fishername));
+                        contest.Register(org.Search(fishername));
                     }
 
                     while (reader1.ReadString(out string fishername))
