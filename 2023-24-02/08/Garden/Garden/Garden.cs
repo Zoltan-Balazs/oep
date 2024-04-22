@@ -17,6 +17,7 @@ namespace Garden
         }
 
         public class ParcelOutOfRangeException : Exception { }
+
         public void Harvest(int where)
         {
             if (where < 1 || parcels.Count < where)

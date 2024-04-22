@@ -14,6 +14,7 @@ namespace Garden
         }
 
         public class AlreadyPlantedException : Exception { }
+
         public void Plant(PlantType plant, int month)
         {
             if (null != Content)
@@ -27,9 +28,9 @@ namespace Garden
 
         public bool HasRipened(int month)
         {
-            return null != Content &&
-                   Content.IsVegetable() &&
-                   month - PlantingDate >= Content.ripeningTime;
+            return null != Content
+                && Content.IsVegetable()
+                && month - PlantingDate >= Content.ripeningTime;
         }
 
         public void Harvest()

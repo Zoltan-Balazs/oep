@@ -22,10 +22,9 @@
 
     abstract class Vegetable : PlantType
     {
-        protected Vegetable(int i) : base(i)
-        {
-            
-        }
+        protected Vegetable(int i)
+            : base(i) { }
+
         public override bool IsVegetable()
         {
             return true;
@@ -34,10 +33,8 @@
 
     abstract class Flower : PlantType
     {
-        protected Flower(int i) : base(i)
-        {
-            
-        }
+        protected Flower(int i)
+            : base(i) { }
 
         public override bool IsFlower()
         {
@@ -47,7 +44,9 @@
 
     class Potato : Vegetable
     {
-        private Potato() : base(5) { }
+        private Potato()
+            : base(5) { }
+
         private static Potato instance;
 
         public static Potato Instance()
@@ -63,7 +62,9 @@
 
     class Pea : Vegetable
     {
-        private Pea() : base(3) { }
+        private Pea()
+            : base(3) { }
+
         private static Pea instance;
 
         public static Pea Instance()
@@ -79,7 +80,9 @@
 
     class Onion : Vegetable
     {
-        private Onion() : base(4) { }
+        private Onion()
+            : base(4) { }
+
         private static Onion instance;
 
         public static Onion Instance()
@@ -95,7 +98,9 @@
 
     class Rose : Flower
     {
-        private Rose() : base(8) { }
+        private Rose()
+            : base(8) { }
+
         private static Rose instance;
 
         public static Rose Instance()
@@ -111,7 +116,9 @@
 
     class Carnation : Flower
     {
-        private Carnation() : base(10) { }
+        private Carnation()
+            : base(10) { }
+
         private static Carnation instance;
 
         public static Carnation Instance()
@@ -127,7 +134,9 @@
 
     class Tulip : Flower
     {
-        private Tulip() : base(7) { }
+        private Tulip()
+            : base(7) { }
+
         private static Tulip instance;
 
         public static Tulip Instance()
