@@ -14,7 +14,7 @@ namespace Garden
             gardener.garden.Plant(4, Pea.Instance(), 4);
 
             Console.Write("A betakarithato parcellak azonositoi: ");
-            foreach (int i in gardener.garden.CanHarvest(7))
+            foreach (int i in gardener.garden.CanHarvest(9))
             {
                 Console.Write($"{i} ");
             }
