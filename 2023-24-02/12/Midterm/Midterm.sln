@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Midterm", "Midterm\Midterm.csproj", "{4ECA7154-BEF7-4FE9-942B-0650C8298469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidtermTest", "MidtermTest\MidtermTest.csproj", "{1C07CBEC-18C8-4237-90D2-F2DA94F700D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4ECA7154-BEF7-4FE9-942B-0650C8298469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ECA7154-BEF7-4FE9-942B-0650C8298469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ECA7154-BEF7-4FE9-942B-0650C8298469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ECA7154-BEF7-4FE9-942B-0650C8298469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C07CBEC-18C8-4237-90D2-F2DA94F700D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C07CBEC-18C8-4237-90D2-F2DA94F700D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C07CBEC-18C8-4237-90D2-F2DA94F700D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C07CBEC-18C8-4237-90D2-F2DA94F700D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
