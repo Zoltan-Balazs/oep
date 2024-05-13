@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Text;
 using Midterm;
 
 namespace MidtermTest;
@@ -73,8 +74,19 @@ public class UnitTest
     [TestMethod]
     public void Test()
     {
-        int[] a = new int[] { 3, 5, -3, 1, -2, 7 };
+        StringBuilder stringBuilder = new StringBuilder();
+        StringWriter stringWriter = new StringWriter(stringBuilder);
         
+        Console.SetOut(stringWriter);
+        Course.TestMethod();
+        Assert.AreEqual("Hello, World!\n", stringBuilder.ToString());
+
+        stringBuilder.Clear();
+        Course.TestMethod();
+        Assert.AreEqual("Hello, World!\n", stringBuilder.ToString());
         
+        var standardOutput = new StreamWriter(Console.OpenStandardOutput());
+        standardOutput.AutoFlush = true;
+        Console.SetOut(standardOutput);
     }
 }

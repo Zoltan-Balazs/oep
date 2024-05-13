@@ -98,9 +98,9 @@ namespace Midterm
             return exam;
         }
 
-        public void TestMethod()
+        public static void TestMethod()
         {
-            Trace.WriteLine("Hello, World!");
+            Console.WriteLine("Hello, World!");
         }
     }
 }
